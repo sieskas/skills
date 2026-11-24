@@ -13,16 +13,20 @@ description: >-
 
 Transforme une idée brute (interface, landing page, animation, scène 3D/WebGL) en un **prompt complet, exécutable et exigeant**, conçu pour empêcher les agents IA de produire du « AI slop » et les forcer à itérer visuellement jusqu'à un rendu de niveau studio.
 
-## Étape 1 : Cadrage express
+## Étape 1 : Cadrage express (anti-refonte)
 
-Si l'utilisateur a déjà décrit son idée clairement, **générer directement le prompt** sans poser de questions inutiles.
+Si l'utilisateur a déjà répondu clairement à ces points dans sa demande, **générer directement le prompt** sans poser de questions inutiles.
 
-Si le brief est trop vague (un seul mot ou objectif flou), poser **au maximum 2 questions courtes** :
-1. **Type de rendu & ambiance** (ex. App SaaS minimaliste, Landing éditoriale, Scène 3D cinématique) + 1 référence visuelle si l'utilisateur en a une.
-2. **Mode d'exécution visé** :
-   - **Antigravity (`/goal`)** *(par défaut)* — boucle autonome avec sous-agent navigateur.
-   - **Cursor / Claude Code (interactif)** — avec fichier `DESIGN.md` + captures Playwright/navigateur.
+Sinon, avant d'écrire la première ligne de code ou le prompt final, poser **en un seul message court** les questions manquantes parmi ces 4 axes (ce sont elles qui évitent 70 % des refontes coûteuses en tokens) :
+1. **Portée réelle :** périmètre minimal (une seule vue/scène) ou exploration plus large (multi-vues, sous-éléments, interactions supplémentaires) ?
+2. **Assets & niveau de réalisme :** vraies ressources externes (photos, textures HD, icônes/données réelles) dès la v1, ou 100 % généré/procédural ?
+3. **Style des pièces maîtresses :** sobre/fidèle ou spectaculaire/stylisé (avec 1 référence visuelle concrète si possible) ?
+4. **Mode d'exécution & budget d'itérations :**
+   - **Rapide (2 cycles ciblés)** — 1 refonte majeure + 1 polish *(meilleur ratio qualité/tokens)*,
+   - **Antigravity (`/goal`, 3–4 cycles)** — boucle autonome exigeante avec sous-agent navigateur,
    - **Ralph Wiggum Loop (CLI longue durée)** — boucle externe `while` avec fichier d'état et `--max-iterations`.
+
+> **Règle d'architecture (économie de tokens) :** toujours structurer le prompt pour découper le code en **petits modules par domaine** plutôt qu'un gros fichier monolithique, afin que chaque itération visuelle coûte peu de contexte à relire et modifier.
 
 ## Étape 2 : Adapter la recette au type de projet
 
@@ -65,7 +69,7 @@ Le prompt généré doit **toujours** contenir ces 5 sections, rédigées concr�
 - **Zéro mention de « travaille 2h »** en temps horloge dans un prompt unique : remplacer par un nombre d'itérations et des critères vérifiables.
 - *Si l'utilisateur demande le mode **Ralph Wiggum Loop*** : ajouter en plus un bloc court avec le fichier d'état (`prd.json` ou `EVAL_LOG.md`), la condition de sortie (`<promise>DONE</promise>`) et un plafond d'itérations (`--max-iterations 10`).
 
-## Étape 4 : Livraison à l'utilisateu
+## Étape 4 : Livraison à l'utilisateur
 
 1. Présenter le **prompt final dans un seul bloc de code Markdown** prêt à copier-coller.
 2. Si le projet est une app ou un site multi-pages, proposer (ou fournir directement si pertinent) le **`DESIGN.md`** associé à placer à la racine du dépôt.
