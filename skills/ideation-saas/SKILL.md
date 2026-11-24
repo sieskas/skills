@@ -1,103 +1,101 @@
 ---
 name: ideation-saas
 description: >-
-  Génère des idées originales et rentables de nouvelles fonctionnalités, leviers d'acquisition
-  ou modèles de monétisation pour un SaaS en contournant le « mode collapse » des LLM.
-  Combine les techniques de créativité IA prouvées (Verbalized Sampling, séparation stricte
-  Divergence/Convergence CreativeDC, liste noire anti-clichés d'Ethan Mollick, collisions
-  hors-secteur) avec les frameworks des sommités SaaS (Teresa Torres, Elena Verna, Kyle Poyar,
-  Bob Moesta, Lenny Rachitsky, Shreyas Doshi). À utiliser dès que l'utilisateur cherche de
-  nouvelles idées de features pour son SaaS, veut augmenter son nombre de clients, son MRR,
-  son panier moyen ou explorer de nouveaux axes de croissance produit.
+  Generates original, monetizable feature, acquisition, or pricing ideas for a SaaS product while
+  bypassing LLM mode collapse. Combines proven AI creativity techniques (Verbalized Sampling,
+  strict CreativeDC Divergence/Convergence separation, Ethan Mollick's anti-cliche blacklist,
+  cross-industry collisions) with frameworks from top SaaS product leaders (Teresa Torres,
+  Elena Verna, Kyle Poyar, Bob Moesta, Lenny Rachitsky, Shreyas Doshi). Use whenever the user
+  wants new SaaS feature ideas, higher MRR, more customers, higher ARPU, or new product growth levers.
 ---
 
-# Idéation SaaS Inventive & Monétisable
+# Inventive & Monetizable SaaS Ideation
 
-Méthode anti-clichés pour explorer de nouvelles fonctionnalités SaaS qui génèrent réellement **plus de clients** ou **plus de revenus**, en cassant le biais de moyenne statistique (*mode collapse*) des LLM.
+An anti-cliche method for discovering SaaS features that genuinely drive **more customers** or **more revenue**, explicitly breaking LLM statistical-average bias (*mode collapse*).
 
-## Règle absolue : ne jamais brainstormer « à froid » ni en un seul bloc
+## Golden Rule: Never Brainstorm Cold or in a Single Pass
 
-Un prompt classique (« donne-moi 10 idées de features pour mon SaaS ») produit toujours les mêmes clichés (copilote IA, parrainage, plan Enterprise générique). Ce skill impose **4 garde-fous non négociables** :
-1. Ancrer l'idéation dans des **frictions réelles** et un **levier business précis**.
-2. **Bannir explicitement** les idées évidentes avant de commencer.
-3. **Séparer strictement** la phase de divergence sauvage et la phase de filtrage business.
-4. **Passer chaque pépite au crible sceptique** avant de la recommander.
-
----
-
-## Étape 1 : Cadrage express (max 4 questions)
-
-Si l'utilisateur n'a pas encore décrit son SaaS, poser au maximum **4 questions courtes** en une seule fois :
-1. **Le produit & les rôles** : que fait ton SaaS en 2 phrases ? Qui l'**utilise** au quotidien et qui **paie** la facture ?
-2. **Pricing actuel** : comment tu factures aujourd'hui (siège, usage, abonnement fixe, freemium…) et quel est ton panier moyen ?
-3. **Levier prioritaire** : tu veux surtout **plus de clients** (acquisition / conversion) ou **plus d'argent par client** (expansion / upsell / rétention) ?
-4. **Matière première réelle (optionnel mais très puissant)** : quels sont les 2–3 trucs pénibles que tes clients font encore *à la main* hors de ton outil, ou les principales raisons de churn / refus de vente ?
-
-*Si l'utilisateur fournit des verbatims (tickets support, notes d'appels, avis, codebase), en extraire d'abord les **contournements manuels** (workarounds) et **moments de friction** en citant les faits exacts — ne jamais inventer de besoins fictifs.*
+A generic prompt ("give me 10 feature ideas for my SaaS") always yields the same cliches (AI copilot, referral program, generic Enterprise tier). This skill enforces **4 non-negotiable guardrails**:
+1. Anchor ideation in **real user friction** and a **specific business lever**.
+2. **Explicitly ban** the obvious ideas before starting.
+3. **Strictly separate** wild divergence from ruthless business filtering.
+4. **Stress-test every finalist** with a skeptical review before recommending it.
 
 ---
 
-## Étape 2 : Cartographie des angles business (Torres + Verna + Moesta + Poyar + Rachitsky)
+## Step 1: Express Framing (Max 4 Questions)
 
-Avant d'imaginer la moindre feature, poser un diagnostic rapide sur **5 axes** (1–2 lignes par axe, centré sur le levier prioritaire) :
+If the user has not yet described their SaaS, ask at most **4 short questions** in a single message:
+1. **Product & roles:** What does your SaaS do in 2 sentences? Who **uses** it daily, and who **pays** the bill?
+2. **Current pricing:** How do you charge today (per seat, usage, flat subscription, freemium...) and what is your average ticket / ARPU?
+3. **Priority lever:** Are you mainly aiming for **more customers** (acquisition / conversion) or **more revenue per customer** (expansion / upsell / retention)?
+4. **Real raw material (optional, high leverage):** What are 2-3 painful things customers still do *manually* outside your tool, or the top reasons for churn / lost deals?
 
-| Sommité | Angle d'attaque à inspecter |
+*If the user supplies real evidence (support tickets, call notes, reviews, codebase), first extract **manual workarounds** and **friction moments** citing exact facts — never invent fictional needs.*
+
+---
+
+## Step 2: Business Angle Mapping (Torres + Verna + Moesta + Poyar + Rachitsky)
+
+Before ideating a single feature, run a quick **5-angle diagnostic** (1-2 lines per angle, focused on the priority lever):
+
+| Leader | Angle to Inspect |
 |---|---|
-| **Teresa Torres** (*Opportunity Solution Tree*) | Quels **bricolages manuels** (exports CSV, copier-coller, emails manuels) prouvent une douleur non résolue ? |
-| **Elena Verna** (*Monetization-Led Growth*) | Quelle **feature pour le décideur/acheteur** (contrôle, gouvernance, visibilité équipe, preuve de ROI) manque face aux features utilisateur ? |
-| **Bob Moesta** (*Jobs-to-be-Done*) | Quelle **anxiété ou habitude** bloque le passage à l'acte (*Switch Moment*) chez un prospect ? |
-| **Kyle Poyar** (*Pricing & Packaging*) | Quelle feature ferait **consommer 3× plus** l'unité de valeur ou justifierait un **add-on / modèle hybride** (base + crédits/usage) ? |
-| **Lenny Rachitsky** (*Growth Loops*) | Quel livrable ou workflow interne pourrait **exposer le SaaS** aux clients, collègues ou partenaires des utilisateurs existants ? |
+| **Teresa Torres** (*Opportunity Solution Tree*) | What **manual workarounds** (CSV exports, copy-pasting, manual emails) prove an unsolved pain? |
+| **Elena Verna** (*Monetization-Led Growth*) | What **buyer/decision-maker feature** (control, governance, team visibility, ROI proof) is missing alongside end-user features? |
+| **Bob Moesta** (*Jobs-to-be-Done*) | What **anxiety or habit** blocks prospects at the *Switch Moment*? |
+| **Kyle Poyar** (*Pricing & Packaging*) | What feature would drive **3x higher consumption** of the value metric or justify an **add-on / hybrid model** (base + credits/usage)? |
+| **Lenny Rachitsky** (*Growth Loops*) | What artifact or internal workflow could **expose the SaaS** to existing users' clients, teammates, or partners? |
 
 ---
 
-## Étape 3 : Liste noire anti-clichés (antidote au Mode Collapse — Ethan Mollick)
+## Step 3: Anti-Cliche Blacklist (Mode Collapse Antidote — Ethan Mollick)
 
-Lister brièvement les **10 idées les plus évidentes / banales** que n'importe quel PM ou LLM sortirait en premier pour ce SaaS (ex. *« ajouter un chatbot IA », « programme d'affiliation », « intégration Zapier », « mode sombre », « tableau de bord analytics générique »*).
+Briefly list the **10 most obvious / generic ideas** that any PM or LLM would suggest first for this SaaS (e.g. *"add an AI chatbot"*, *"affiliate program"*, *"Zapier integration"*, *"dark mode"*, *"generic analytics dashboard"*).
 
-**Déclarer ces 10 idées formellement interdites** pour toute la suite de la session.
-
----
-
-## Étape 4 : DIVERGENCE pure (CreativeDC + Verbalized Sampling)
-
-> **Contrainte stricte :** pendant cette étape, **interdiction totale** de filtrer par faisabilité technique, coût de dev ou « bon sens ». L'objectif est de sortir du cluster probabiliste habituel.
-
-Générer **16 à 20 idées originales** réparties en **4 moteurs créatifs** :
-
-1. **Verbalized Sampling — Longue traîne (`p < 0,10`)** *(5 idées)* :
-   - Ne garder que des idées dont la probabilité d'être proposées par un PM classique est estimée **< 10 %**.
-   - Pour chaque idée, indiquer explicitement `[p ≈ 0.0X]` et **quelle norme du secteur elle casse**.
-2. **Collisions hors-secteur** *(5 idées)* :
-   - Transposer des mécaniques qui rapportent gros dans 5 industries éloignées (ex. jeux vidéo *free-to-play*, aviation *low-cost*, finance/assurance, luxe/conciergerie, logistique, immobilier, open-source).
-   - Nommer l'industrie source + la mécanique exacte transposée au SaaS.
-3. **Inversion & Contraintes extrêmes** *(4 idées)* :
-   - Répondre à des contraintes radicales adaptées au levier choisi :
-     - *Si objectif Revenu* : « Comment facturer 5× plus cher à un client existant **sans** ajouter un seul siège ? »
-     - *Si objectif Clients* : « Comment acquérir des clients sans budget pub ni commercial, uniquement via l'usage du produit ? »
-4. **Rôle Wildcard / Provocateur** *(2 à 4 idées)* :
-   - Des idées volontairement dérangeantes, contre-intuitives ou « trop bizarres pour être raisonnables » (c'est souvent en domestiquant une idée folle qu'on trouve une vraie différenciation).
+**Formally declare these 10 ideas banned** for the rest of the session.
 
 ---
 
-## Étape 5 : CONVERGENCE & Filtre « Tueur d'idées » (Shreyas Doshi + Verna + Torres)
+## Step 4: Pure DIVERGENCE (CreativeDC + Verbalized Sampling)
 
-Changer radicalement de casquette : adopter le point de vue d'un **Comité impitoyable** (CPO sceptique + CFO obsédé par la marge + client qui déteste payer pour un outil de plus).
+> **Strict constraint:** during this step, **zero filtering** by technical feasibility, dev cost, or "common sense." The goal is to escape the default probability cluster.
 
-1. **Éliminer sans pitié** les idées « sympas » mais qui ne résolvent pas un problème n°1 (*Customer Problem Stack Ranking* de Shreyas Doshi).
-2. **Sélectionner les 4 à 5 meilleures pépites** (dont au moins 1 idée issue de la catégorie *Wildcard* ou *Collision* rendue pragmatique).
-3. Pour chaque pépite retenue, produire une **fiche actionnable** contenant :
-   - **Le concept concret** (en 2 phrases claires, sans jargon).
-   - **Mécanique cash & packaging** : comment ça fait entrer de l'argent (acquisition / conversion / add-on / tier supérieur / crédits d'usage) et **qui** valide la dépense.
-   - **Pourquoi ça se démarque** : quel angle mort des concurrents elle exploite.
-   - **L'hypothèse tueuse** : la croyance la plus risquée qui peut faire échouer l'idée.
-   - **Test en 48h sans coder** : expérience ultra-rapide pour valider l'appétit réel avant de développer (*fake door*, page de prévente, maquette cliquable, service manuel *Wizard-of-Oz*).
+Generate **16 to 20 original ideas** across **4 creative engines**:
+
+1. **Verbalized Sampling — Long Tail (`p < 0.10`)** *(5 ideas)*:
+   - Keep only ideas with an estimated **< 10% probability** of being suggested by a conventional PM.
+   - For each idea, explicitly state `[p ~ 0.0X]` and **which industry norm it breaks**.
+2. **Cross-Industry Collisions** *(5 ideas)*:
+   - Transplant high-revenue mechanics from 5 distant industries (e.g. free-to-play gaming, low-cost aviation, finance/insurance, luxury concierge, logistics, real estate, open-source).
+   - Name the source industry + the exact mechanic adapted to the SaaS.
+3. **Inversion & Extreme Constraints** *(4 ideas)*:
+   - Answer radical constraints tailored to the chosen lever:
+     - *If Revenue goal:* "How could you charge an existing customer **5x more** without adding a single seat?"
+     - *If Customers goal:* "How could you acquire customers with **zero ad budget and zero sales team**, purely through product usage?"
+4. **Wildcard / Provocateur Role** *(2-4 ideas)*:
+   - Deliberately uncomfortable, counter-intuitive, or "too weird to be reasonable" ideas (taming a wild idea often produces genuine differentiation).
 
 ---
 
-## Étape 6 : Restitution & Prolongements
+## Step 5: CONVERGENCE & "Idea Killer" Filter (Shreyas Doshi + Verna + Torres)
 
-1. Présenter un **tableau comparatif synthétique** des 4–5 pépites retenues (Nom, Levier, Impact cash potentiel, Effort de test, Score de différenciation), suivi des fiches détaillées.
-2. En fin de réponse, proposer deux suites concrètes :
-   - **Approfondir une pépite** : transformer l'idée choisie en mini-spec + script de test 48h prêt à lancer.
-   - **Cross-Vendor Pooling (méthode Wharton)** : fournir un prompt compact (incluant la liste noire et le *Verbalized Sampling*) que l'utilisateur peut copier-coller dans un autre LLM (Claude, GPT, etc.) pour croiser les angles morts entre modèles.
+Switch hats completely: adopt a **ruthless Investment Committee** lens (skeptical CPO + margin-obsessed CFO + customer who hates paying for one more tool).
+
+1. **Eliminate without mercy** "nice-to-have" ideas that do not solve a #1 problem (Shreyas Doshi's *Customer Problem Stack Ranking*).
+2. **Select the top 4-5 gems** (including at least 1 idea from *Wildcard* or *Collision* made pragmatic).
+3. For each selected gem, deliver an **actionable brief**:
+   - **Concrete concept** (2 plain-English sentences, zero jargon).
+   - **Cash & packaging mechanic:** how it brings in money (acquisition / conversion / add-on / higher tier / usage credits) and **who** approves the spend.
+   - **Why it stands out:** which competitor blind spot it exploits.
+   - **The killer assumption:** the single riskiest belief that could make it fail.
+   - **48-hour no-code test:** ultra-fast experiment to validate real willingness to pay before building (*fake door*, pre-sale page, clickable mockup, *Wizard-of-Oz* manual service).
+
+---
+
+## Step 6: Delivery & Next Steps
+
+1. Present a **summary comparison table** of the 4-5 finalists (Name, Lever, Cash Potential, Test Effort, Differentiation Score), followed by the detailed briefs.
+2. End with two concrete follow-up options:
+   - **Deep-dive one gem:** turn the chosen idea into a mini-spec + ready-to-run 48h validation script.
+   - **Cross-Vendor Pooling (Wharton method):** output a compact prompt (including the blacklist and *Verbalized Sampling* directive) that the user can paste into another LLM (Claude, GPT, etc.) to cross-check blind spots across models.
