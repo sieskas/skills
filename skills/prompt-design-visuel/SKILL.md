@@ -11,7 +11,7 @@ description: >-
   website, interface, animation, or 3D scene with an AI agent.
 ---
 
-# Visual & Agentic Design Prompt Generato
+# Visual & Agentic Design Prompt Generator
 
 Transforms a raw idea (website, interface, landing page, animation, 3D/WebGL scene) into a **complete, executable, high-bar prompt** designed to break AI coding agents out of statistical-median "AI slop" (both the *"Claude Code look"* and *"v0/Linear Bento slop"*) and force visual iteration up to distinctive, studio-grade craft.
 
@@ -82,7 +82,7 @@ Every generated prompt must include these 5 concrete sections (never leave gener
 - **Never write "work for 2 hours"** in clock time inside a single prompt — replace with iteration counts and verifiable quality gates.
 - *If the user asks for **Ralph Wiggum Loop** mode:* append a short block specifying the state file (`prd.json` or `EVAL_LOG.md`), exit promise (`<promise>DONE</promise>`), and iteration cap (`--max-iterations 10`).
 
-## Step 4: Delivery to the Use
+## Step 4: Delivery to the User
 
 1. Output the **final prompt inside a single copy-pasteable Markdown code block**.
 2. For multi-page apps or sites, offer (or include directly) a companion **`DESIGN.md`** for the repository root.
